@@ -1,0 +1,30 @@
+embedden/**/*.so 
+embedden/**/*.c
+embedden/**/*.cpp
+*.swp
+*.swo
+*~
+
+*.py[cod]
+__pycache__
+.cache
+.pytest_cache
+.ipynb_checkpoints/
+
+# setup and build
+docs/_*
+*.egg-info/
+dist/
+build/
+MANIFEST
+
+# OS-generated files
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+tmp/
+.vscode
+

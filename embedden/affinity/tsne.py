@@ -1,6 +1,6 @@
 import warnings
 import numpy as np
-from scipy.sparse import coo_matrix
+from scipy.sparse import coo_matrix, csr_matrix
 from sklearn.manifold._utils import _binary_search_perplexity
 from sklearn.base import BaseEstimator, TransformerMixin
 
@@ -104,10 +104,10 @@ class TsneAffinityKernel(BaseEstimator, TransformerMixin):
 
         # compute the joint probability distribution for the input space
         self.P_ = _joint_probabilities_nn(
-            knn_graph, self.perplexity, self.verbose
+            knn_graph, self.perplexity,
         )
 
         return self
 
     def transform(self, knn_graph):
-        return self._P
+        return self.P_
